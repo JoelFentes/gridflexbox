@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Flexbox e Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #202020;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #00ffcc;
+    }
+
+    a {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      color: #202020;
+      background-color: #00ffcc;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+      background-color: #00cfa3;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Escolha um layout:</h1>
+  <div class="links">
+    <a href="flexbox.html">Layout Flexbox</a>
+    <a href="grid.html">Layout Grid</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout Flexbox</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Roboto", sans-serif;
+      background-color: #202020;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      width: 100%;
+      padding: 20px 5px;
+      border: 5px solid green;
+      color: green;
+      gap: 5px;
+    }
+
+    nav {
+      display: flex;
+      width: 80%;
+      padding: 20px;
+      border: 5px solid yellow;
+      color: yellow;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 65vh;
+      border: 5px solid green;
+      color: green;
+      gap: 5px;
+      padding: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      flex: 1;
+    }
+
+    .main-content {
+      display: flex;
+      flex: 1;
+      gap: 5px;
+      height: 100%;
+    }
+
+    .main-section {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      padding: 20px 5px;
+      border: 5px solid yellow;
+      color: yellow;
+      gap: 5px;
+    }
+
+    .main-section article {
+      padding: 10px;
+      border: 3px solid blue;
+      color: blue;
+    }
+
+    .main-section > section {
+      margin-top: auto;
+      padding: 25px;
+      border: 3px solid yellow;
+    }
+
+    aside {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding: 10px;
+      border: 5px solid yellow;
+      color: yellow;
+      gap: 5px;
+    }
+
+    aside section {
+      padding: 20px;
+      border: 3px solid blue;
+      color: blue;
+    }
+
+    footer {
+      padding: 10px;
+      width: 100%;
+      height: 80px;
+      border: 5px solid green;
+      color: green;
+    }
+
+    @media (max-width: 768px) {
+      html, body {
+        height: 100%;
+      }
+
+      header {
+        height: auto;
+        align-items: flex-start;
+      }
+
+      main {
+        height: 100%;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      article {
+        height: 110px;
+      }
+
+      .main-section,
+      aside {
+        width: 100%;
+      }
+
+      aside {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: space-between;
+      }
+
+      aside h2 {
+        display: block;
+        margin-bottom: 10px;
+        white-space: normal;
+      }
+
+      aside section {
+        display: inline-block;
+        min-width: 45%;
+        margin-right: 10px;
+        vertical-align: top;
+      }
+
+      footer {
+        height: auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>header</h1>
+    <nav>
+      <h1>nav</h1>
+    </nav>
+  </header>
+
+  <main>
+    <h2>main</h2>
+    <div class="main-content">
+      <section class="main-section">
+        <h2>section</h2>
+        <article><h3>article</h3></article>
+        <article><h3>article</h3></article>
+        <article><h3>article</h3></article>
+        <section><h2>section</h2></section>
+      </section>
+
+      <aside>
+        <h2>aside</h2>
+        <section><h3>section</h3></section>
+        <section><h3>section</h3></section>
+        <section><h3>section</h3></section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <h2>footer</h2>
+  </footer>
+</body>
+</html>
